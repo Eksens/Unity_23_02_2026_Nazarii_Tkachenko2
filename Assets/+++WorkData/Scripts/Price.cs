@@ -9,7 +9,7 @@ public class Price : MonoBehaviour
     void Start()
     {
         float discountFloat = float.Parse(discount.Replace("%", "")) / 100f;
-        float result = price*count*discountFloat;
+        float result = price*count*(1f-discountFloat);
         Debug.Log("Price: " + price +"$");
         Debug.Log("Count: " + count);
         Debug.Log("Discount: " + discount);
